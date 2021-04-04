@@ -25,6 +25,7 @@ Which means that the system takes the string as a whole and does not consider ev
 ## Technologies used
 
 - Next.js
-- Spotify API
 - Tailwind CSS
+- Spotify API
+- Vercel
 
