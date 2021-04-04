@@ -21,3 +21,10 @@ As of now (March 2021) there are 4 tracks containing this string.
 
 A string of keywords is considered as **one**!
 Which means that the system takes the string as a whole and does not consider every keyword as a tag.
+
+## Technologies used
+
+- Next.js
+- Spotify API
+- Tailwind CSS
+
