@@ -1,6 +1,6 @@
 # SongSeekr
 
-You heared a fantastic song. You want to put it to your playlist but you don't know the title of it.
+You've heard a fantastic song. You want to put it to your playlist but you don't know the title of it.
 You can use Shazam: you can hum to find the song. But what if you knew some text used in the lyrics from heart?
 This app is made for it: just type a string of keywords, get that favorite track and save it to your playlist!
 
@@ -25,6 +25,7 @@ Which means that the system takes the string as a whole and does not consider ev
 ## Technologies used
 
 - Next.js
+- SASS
 - Tailwind CSS
 - Spotify API
 - Vercel
