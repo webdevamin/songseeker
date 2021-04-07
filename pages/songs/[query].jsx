@@ -8,11 +8,12 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import ReactPaginate from 'react-paginate'
 
-export default function Query({ query }) {
+export default function Query() {
     const router = useRouter();
-
-    const subtitle = `Tracks containing '${query}'`;
-    const description = `List of tracks where artists, albums, titles and lyrics contain '${query}'`;
+    const { query } = router.query;
+    const subtitle = query ? `Tracks containing '${query}'` : `All tracks with specified keywords`;
+    const description = query ? `List of tracks where artists, albums, titles and lyrics contain '${query}'` :
+        `List of tracks where artists, albums, titles and lyrics contain specified keywords`;
 
     const [data, setData] = useState(null);
     const [tracks, setTracks] = useState([]);
@@ -100,12 +101,4 @@ export default function Query({ query }) {
             {renderTracks()}
         </Layout>
     )
-}
-
-export async function getServerSideProps(context) {
-    return {
-        props: {
-            query: context.query.query
-        },
-    }
 }

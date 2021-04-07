@@ -3375,7 +3375,7 @@
   "resolved" "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   "version" "0.8.3"
 
-"react@^16.0.0 || ^17.0.0", "react@^16.11.0 || ^17.0.0", "react@17.0.1":
+"react@^16.0.0 || ^17.0.0", "react@17.0.1":
   "integrity" "sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.1.tgz"
   "version" "17.0.1"
@@ -4102,11 +4102,6 @@
   dependencies:
     "es6-object-assign" "^1.1.0"
     "promise-polyfill" "^6.0.2"
-
-"swr@^0.5.3":
-  "integrity" "sha512-RUE3RWn3jt9e4qLPat2A9vbHG/5N6konsc27xKjE65jFSiGv0P7HLD8IGvwAv6DRKktL7Od2UcayX0plKb2awg=="
-  "resolved" "https://registry.npmjs.org/swr/-/swr-0.5.3.tgz"
-  "version" "0.5.3"
 
 "tailwindcss@npm:@tailwindcss/postcss7-compat":
   "integrity" "sha512-R43aiSzwlybDMhDld8vkSIKPSLXxbbmotZ+I2GIrX+IzFNy9JAByC7Ncf9A81Dg0JLBWHY5m769lBbBnJCF8cw=="
