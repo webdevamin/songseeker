@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 
 export default function Nav() {
     return (
@@ -14,8 +12,10 @@ export default function Nav() {
                 <ul>
                     <li>
                         <Link href='/about'>
-                            <a className='text-base uppercase font-bold md:text-base'>
-                                <FontAwesomeIcon icon={faInfoCircle} size='lg' />
+                            <a className='text-base uppercase font-bold md:text-xl 
+                            border-2 rounded-full h-7 w-7 border-secondary-default bg-secondary-default text-white
+                            flex justify-center items-center'>
+                                ?
                             </a>
                         </Link>
                     </li>
