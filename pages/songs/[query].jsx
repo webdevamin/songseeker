@@ -11,9 +11,10 @@ import ReactPaginate from 'react-paginate'
 export default function Query() {
     const router = useRouter();
     const { query } = router.query;
-    const subtitle = query ? `Tracks containing '${query}'` : `All tracks with specified keywords`;
+
+    const subtitle = query ? `Tracks containing '${query}'` : `All tracks with entered keywords`;
     const description = query ? `List of tracks where artists, albums, titles and lyrics contain '${query}'` :
-        `List of tracks where artists, albums, titles and lyrics contain specified keywords`;
+        `List of tracks where artists, albums, titles and lyrics contain entered keywords`;
 
     const [data, setData] = useState(null);
     const [tracks, setTracks] = useState([]);
@@ -23,25 +24,27 @@ export default function Query() {
     const [isSpotifyError, setIsSpotifyError] = useState(false);
 
     useEffect(() => {
-        getTracks(query, 0).then((res) => {
-            if (res) {
-                if (res.data.tracks.total > 1000) {
-                    localStorage.setItem('overload', true);
-                    router.push('/');
+        if (query) {
+            getTracks(query, 0).then((res) => {
+                if (res) {
+                    if (res.data.tracks.total > 1000) {
+                        localStorage.setItem('overload', true);
+                        router.push('/');
+                    }
+
+                    setIsSpotifyError(false);
+
+                    setData(res);
+                    setLimit(res.data.tracks.limit);
+                    setTracks(res.data.tracks.items);
+                    setCountTracks(res.data.tracks.total);
                 }
-
-                setIsSpotifyError(false);
-
-                setData(res);
-                setLimit(res.data.tracks.limit);
-                setTracks(res.data.tracks.items);
-                setCountTracks(res.data.tracks.total);
-            }
-            else {
-                setIsSpotifyError(true);
-            }
-        });
-    }, []);
+                else {
+                    setIsSpotifyError(true);
+                }
+            });
+        }
+    }, [query]);
 
     const handlePageClick = ({ selected }) => {
         getTracks(query, selected * limit).then((res) => {
