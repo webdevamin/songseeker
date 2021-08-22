@@ -1,11 +1,11 @@
 import axios from 'axios';
-import { getAccessToken } from "../config/spotify";
+import {getAccessToken} from "../config/spotify";
 
 const getTracks = async (query, offset) => {
     try {
         const accessToken = await getAccessToken();
 
-        const itemsRes = await axios.get(process.env.NEXT_PUBLIC_SPOTIFY_URL, {
+        return await axios.get(process.env.NEXT_PUBLIC_SPOTIFY_URL, {
             params: {
                 'type': 'track',
                 'market': 'US',
@@ -15,8 +15,6 @@ const getTracks = async (query, offset) => {
                 'Authorization': `Bearer ${accessToken}`
             }
         });
-
-        return itemsRes;
     }
     catch (err) {
         return false;
