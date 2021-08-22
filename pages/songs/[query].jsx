@@ -74,7 +74,6 @@ export default function Query() {
                             previousLabel={String.fromCharCode(10216)}
                             nextLabel={String.fromCharCode(10217)}
                             breakLabel={'...'}
-                            breakClassName={'break-me'}
                             pageCount={(countTracks / limit)}
                             marginPagesDisplayed={1}
                             pageRangeDisplayed={1}
