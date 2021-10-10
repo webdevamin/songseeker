@@ -1,4 +1,4 @@
-# SongSeekr
+# SongSeeker
 
 You've heard a fantastic song. You want to put it to your playlist but you don't know the title of it.
 You can use Shazam: you can hum to find the song. But what if you knew some text used in the lyrics from heart?
